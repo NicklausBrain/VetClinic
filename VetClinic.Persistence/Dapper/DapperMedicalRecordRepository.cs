@@ -45,9 +45,18 @@ namespace VetClinic.Persistence.Dapper
 					new { Id = recordId }))
 				{
 					var record = recordData.Read<dynamic>().First();
-					var medicalHistory = recordData.Read<Treatment>();
+					var medicalHistory = recordData
+						.Read<dynamic>()
+						.Select(treatment => new Treatment(
+							id: treatment.Id,
+							date: treatment.Date,
+							description: treatment.Description,
+							price: treatment.Price));
 
-					return new MedicalRecord(record.Id, this.petRepository.GetById(record.PetId), medicalHistory);
+					return new MedicalRecord(
+						id: record.Id,
+						getPet: new Func<Pet>(() => this.petRepository.GetById(record.PetId)),
+						medicalHistory: medicalHistory);
 				}
 			}
 		}
@@ -71,7 +80,7 @@ namespace VetClinic.Persistence.Dapper
 							Date = treatment.Date,
 							Description = treatment.Description,
 							Price = treatment.Price,
-							MedicalRecordId =record.Id
+							MedicalRecordId = record.Id
 						});
 				}
 

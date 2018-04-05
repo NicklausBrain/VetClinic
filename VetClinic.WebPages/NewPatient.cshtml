@@ -1,0 +1,108 @@
+﻿@using VetClinic.Domain
+@using VetClinic.WebPages.Application
+
+@{
+	Layout = "Layout.cshtml";
+}
+
+<!-- Date Picker -->
+<script src="js/bootstrap-datepicker.min.js"></script>
+<!-- Initialize Date Picker control-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#birthday').datepicker({
+			format: "dd-mm-yy",
+			orientation: "bottom auto"
+		});
+	})
+</script>
+
+<!-- Page Heading -->
+<div class="row">
+	<div class="col-lg-4">
+		<h1 class="page-header">
+			New Patient
+			<!--<small>Secondary Text</small>-->
+		</h1>
+	</div>
+</div>
+<!-- /.row -->
+
+<div class="row">
+	@if (IsPost)
+	{
+		var petsRepository = new XmlRepository<Pet>(Settings.PetRepositoryPath);
+
+		var image = Request.Files[0];
+
+		using (var file = File.Create(string.Format(@"{0}\{1}", Settings.PetImagesPath, image.FileName)))
+		{
+			image.InputStream.CopyTo(file);
+		}
+
+		petsRepository.Create(new Pet
+		{
+			Name = Request["Name"],
+			Birthday = DateTime.Parse(Request["Birthday"]),
+			Description = Request["Description"],
+			Sex = (Sex)Enum.Parse(typeof(Sex), Request["Sex"]),
+			PetType = (PetType)Enum.Parse(typeof(PetType), Request["Type"]),
+			Image = image.FileName
+		});
+
+		petsRepository.SaveChanges();
+
+		<div class="alert alert-success">
+			<strong>New patient has been successfully registerd!</strong>
+		</div>
+	}
+	else
+	{
+
+		<div class="col-md-7">
+			<form role="form" action="#" method="POST" enctype="multipart/form-data">
+				<div class="form-group">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" id="name" name="Name">
+				</div>
+				<div class="form-group">
+					<label for="birthday">Birthday:</label>
+					<input type="text" class="form-control" id="birthday" name="Birthday">
+				</div>
+
+				<div class="form-group">
+					<label for="sex">Sex:</label>
+					<select class="form-control" id="sex" name="Sex">
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="type">Type:</label>
+					<select class="form-control" id="type" name="Type">
+						<option>Dog</option>
+						<option>Cat</option>
+						<option>Bunny</option>
+						<option>Guinea Pig</option>
+						<option>Other</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="description">Description:</label>
+					<textarea class="form-control" id="description" name="Description"></textarea>
+				</div>
+
+				<div class="form-group">
+					<label for="image">Image:</label>
+					<input type="file" class="btn-default" id="image" name="Image" accept="image/*">
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default col-xs-12">Create</button>
+				</div>
+			</form>
+		</div>
+	}
+</div>
+<!-- /.row -->

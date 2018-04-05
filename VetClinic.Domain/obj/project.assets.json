@@ -177,23 +177,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nikolay.mozgovoy\\.nuget\\packages\\": {},
+    "C:\\Users\\Nick\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive\\!Sigma-Students-2018\\Backend\\Samples.Core\\VetClinic.Domain\\VetClinic.Domain.csproj",
+      "projectUniqueName": "D:\\OneDrive\\!Sigma-Students-2018\\ASP.NET\\VetClinic\\VetClinic.Domain\\VetClinic.Domain.csproj",
       "projectName": "VetClinic.Domain",
-      "projectPath": "D:\\OneDrive\\!Sigma-Students-2018\\Backend\\Samples.Core\\VetClinic.Domain\\VetClinic.Domain.csproj",
-      "packagesPath": "C:\\Users\\nikolay.mozgovoy\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive\\!Sigma-Students-2018\\Backend\\Samples.Core\\VetClinic.Domain\\obj\\",
+      "projectPath": "D:\\OneDrive\\!Sigma-Students-2018\\ASP.NET\\VetClinic\\VetClinic.Domain\\VetClinic.Domain.csproj",
+      "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
+      "outputPath": "D:\\OneDrive\\!Sigma-Students-2018\\ASP.NET\\VetClinic\\VetClinic.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\nikolay.mozgovoy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

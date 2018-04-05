@@ -41,7 +41,7 @@ CREATE TABLE [dbo].[Pets](
 	[Name] [nvarchar](50) NOT NULL,
 	[Birthday] [datetime2](7) NOT NULL,
 	[Sex] [int] NOT NULL,
-	[PetKind] [int] NOT NULL,
+	[Kind] [int] NOT NULL,
 	[Description] [nvarchar](2048) NULL,
 	[Image] [nvarchar](2048) NULL,
 	[OwnerId] [uniqueidentifier] NULL,

@@ -30,6 +30,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VetClinic.Template", "VetCl
 		SlnRelativePath = "VetClinic.Template\"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic.WebPages", "VetClinic.WebPages\VetClinic.WebPages.csproj", "{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vet.Clinic.Mvc", "Vet.Clinic.Mvc\Vet.Clinic.Mvc.csproj", "{02276798-65E2-460B-9375-1F176AD8EE8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,14 @@ Global
 		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

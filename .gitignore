@@ -3,3 +3,19 @@
 ################################################################################
 
 /.vs
+/packages
+/VetClinic!Console/obj/Release/VetClinic!Console.csproj.CoreCompileInputs.cache
+/VetClinic!Console/obj/Debug/VetClinic!Console.csprojResolveAssemblyReference.cache
+/VetClinic!Console/obj/Debug/VetClinic!Console.csproj.CoreCompileInputs.cache
+/VetClinic.Domain/obj/Debug/netstandard2.0
+/VetClinic.Domain/obj/Release/netstandard2.0
+/VetClinic.Domain/obj/VetClinic.Domain.csproj.nuget.cache
+/VetClinic.Persistence/obj
+/Vet.Clinic.Mvc/bin
+/Vet.Clinic.Mvc/obj
+/VetClinic!Console/bin/Debug
+/VetClinic!Console/obj/Debug
+/VetClinic.WebPages/obj
+/VetClinic.WebPages/bin
+/VetClinic.Domain/bin/Debug/netstandard2.0
+/VetClinic.Persistence/bin/Debug

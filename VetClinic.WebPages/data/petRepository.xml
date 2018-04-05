@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<ArrayOfPet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pet>
+    <Id>16</Id>
+    <Name>Beau</Name>
+    <Birthday>2001-11-05T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Rat</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, quo, minima, inventore voluptatum saepe quos nostrum provident ex quisquam hic odio repellendus atque porro distinctio quae id laboriosam facilis dolorum.</Description>
+    <Image>rat-2.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>13</Id>
+    <Name>Hunter</Name>
+    <Birthday>2010-04-07T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Rabbit</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</Description>
+    <Image>bunny-2.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>7</Id>
+    <Name>Hunter</Name>
+    <Birthday>2013-08-04T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Dog</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</Description>
+    <Image>bulldog-1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>15</Id>
+    <Name>Beau</Name>
+    <Birthday>2004-06-23T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Rat</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</Description>
+    <Image>rat-1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>3</Id>
+    <Name>Luke</Name>
+    <Birthday>2009-05-17T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Cat</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</Description>
+    <Image>cat-3.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>12</Id>
+    <Name>Lilly</Name>
+    <Birthday>2014-12-20T00:00:00</Birthday>
+    <Sex>Female</Sex>
+    <PetType>Rabbit</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</Description>
+    <Image>bunny-1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>5</Id>
+    <Name>Cooper</Name>
+    <Birthday>2005-05-12T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Dog</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</Description>
+    <Image>boxer-dog-3.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>10</Id>
+    <Name>Pepper</Name>
+    <Birthday>2014-07-25T00:00:00</Birthday>
+    <Sex>Female</Sex>
+    <PetType>GuineaPig</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</Description>
+    <Image>guineapig2.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>9</Id>
+    <Name>Oscar</Name>
+    <Birthday>2009-07-02T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>GuineaPig</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</Description>
+    <Image>guineapig1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>6</Id>
+    <Name>Jackson</Name>
+    <Birthday>2014-08-15T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Dog</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</Description>
+    <Image>boxr-dog-1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>2</Id>
+    <Name>Duke</Name>
+    <Birthday>2002-10-17T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Cat</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</Description>
+    <Image>cat-2.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>4</Id>
+    <Name>Samantha</Name>
+    <Birthday>1999-07-06T00:00:00</Birthday>
+    <Sex>Female</Sex>
+    <PetType>Dog</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</Description>
+    <Image>boxer-dog-2.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>14</Id>
+    <Name>Coco</Name>
+    <Birthday>2001-08-26T00:00:00</Birthday>
+    <Sex>Female</Sex>
+    <PetType>Rabbit</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</Description>
+    <Image>bunny-3.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>11</Id>
+    <Name>Riley</Name>
+    <Birthday>2014-12-05T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>GuineaPig</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</Description>
+    <Image>guineapig3.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>1</Id>
+    <Name>Joey</Name>
+    <Birthday>2003-06-09T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Cat</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, quidem, consectetur, officia rem officiis illum aliquam perspiciatis aspernatur quod modi hic nemo qui soluta aut eius fugit quam in suscipit?</Description>
+    <Image>cat-1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>8</Id>
+    <Name>Casey</Name>
+    <Birthday>2011-12-09T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Dog</PetType>
+    <Description>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</Description>
+    <Image>pug-1.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>0</Id>
+    <Name>Doggy</Name>
+    <Birthday>2016-04-06T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Dog</PetType>
+    <Description>Doggy</Description>
+    <Image>WDF_1084209.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>1421927852</Id>
+    <Name>Good Doggy</Name>
+    <Birthday>2016-04-05T00:00:00</Birthday>
+    <Sex>Female</Sex>
+    <PetType>Dog</PetType>
+    <Description>Good Doggy</Description>
+    <Image>WDF_1084209.jpg</Image>
+  </Pet>
+  <Pet>
+    <Id>776536370</Id>
+    <Name>Beaver</Name>
+    <Birthday>2016-04-15T00:00:00</Birthday>
+    <Sex>Male</Sex>
+    <PetType>Other</PetType>
+    <Description>Beaver</Description>
+    <Image>download.jpg</Image>
+  </Pet>
+</ArrayOfPet>

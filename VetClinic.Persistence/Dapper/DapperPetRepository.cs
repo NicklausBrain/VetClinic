@@ -45,14 +45,14 @@ namespace VetClinic.Persistence.Dapper
 		{
 			using (var sql = new SqlConnection(this.connectionString))
 			{
-				var pet = sql.QueryFirst("SELECT FROM Pets WHERE Id = @Id", id);
+				var pet = sql.QueryFirst("SELECT * FROM Pets WHERE Id = @Id", new { Id = id });
 
 				return new Pet(
 					id: pet.Id,
 					name: pet.Name,
 					birthday: pet.Birthday,
-					sex: pet.Sex,
-					kind: pet.Kind,
+					sex: (Sex)pet.Sex,
+					kind: (PetKind)pet.Kind,
 					description: pet.Description,
 					image: pet.Image,
 					getOwner: new Func<Owner>(() => this.owners.GetById(pet.OwnerId)));

@@ -1,0 +1,83 @@
+﻿@using VetClinic.Domain
+@using VetClinic.Persistence.Dapper
+@using VetClinic.WebPages.Application
+
+@{
+	Layout = "Layout.cshtml";
+}
+
+<!-- Page Heading -->
+<div class="row">
+	<div class="col-lg-4">
+		<h1 class="page-header">
+			Patients
+			<!--<small>Secondary Text</small>-->
+		</h1>
+	</div>
+	<div class="col-lg-8">
+		<form role="search" method="GET" class="page-header" action="#">
+			<div class="row form-group">
+				<div class="col-md-8">
+					<input type="text" class="form-control" placeholder="Search" name="SearchString">
+				</div>
+				<div class="col-md-4">
+					<button class="btn btn-default btn-block" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- /.row -->
+@{
+	var connectionString = Settings.ConnectionString;
+	var ownerRepository = new DapperOwnerRepository(connectionString);
+	var petRepository = new DapperPetRepository(connectionString, ownerRepository);
+	var medicalRecordRepository = new DapperMedicalRecordRepository(connectionString, petRepository);
+
+	var petRegistry = new PetRegistry(
+		new DapperUnitOfWork(
+			medicalRecordRepository,
+			ownerRepository,
+			petRepository));
+
+	var searchString = Request["SearchString"];
+
+	IEnumerable<Pet> pets;
+
+	if (string.IsNullOrEmpty(searchString))
+	{
+		pets = petRegistry.Find().Select(record => record.Pet);
+	}
+	else
+	{
+		pets = petRegistry
+			.Find()
+			.Select(record => record.Pet)
+			.Where(
+				pet => pet.GetType().GetProperties().Select(p =>
+					p.GetValue(pet).ToString().ToLower()).Any(s => s.Contains(searchString.ToLower())));
+	}
+}
+
+@foreach (var pet in pets)
+{
+	<div class="row">
+		<div class="col-md-7">
+			<a href="#">
+				<img class="img-responsive" src="~/data/petImages/@pet.Image" alt="">
+			</a>
+		</div>
+		<div class="col-md-5">
+			<h3>Medical Record: <span>@pet.Id</span></h3>
+			<h4>Name: <span>@pet.Name</span> </h4>
+			<h4>Age: <span>@(DateTime.Now.Year - pet.Birthday.Year)</span> </h4>
+			<h4>Sex: <span>@pet.Sex</span> </h4>
+			<h4>Kind: <span>@pet.Kind</span> </h4>
+			<h4>Description:</h4>
+			<p>@pet.Description</p>
+			<a class="btn btn-primary" href="#">View Medical Chart<span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+	</div>
+	<hr>
+	<!-- /.row -->
+}
