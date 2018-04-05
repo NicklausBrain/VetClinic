@@ -37,7 +37,7 @@
 					<li class="@(Request.Path.Contains("Create") ? "active" : "")">
 						@Html.ActionLink("New Patient", "Create", "Patients")
 					</li>
-					<li class="@(Request.Path.EndsWith("Patients") ? "active" : "")">
+					<li class="@(Request.Path == "/" || Request.Path.EndsWith("Patients") ? "active" : "")">
 						@Html.ActionLink("Patients", "Index", "Patients")
 					</li>
 					<li>

@@ -19,3 +19,5 @@
 /VetClinic.WebPages/bin
 /VetClinic.Domain/bin/Debug/netstandard2.0
 /VetClinic.Persistence/bin/Debug
+/VetClinic.Domain/obj/Debug
+/VetClinic.Domain/bin/Debug

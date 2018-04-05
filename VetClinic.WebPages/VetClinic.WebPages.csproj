@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VetClinic.Domain\VetClinic.Domain.csproj">
-      <Project>{a612c72f-4f7f-4767-8daa-72829c1f1d7b}</Project>
+      <Project>{3cb0f950-79da-4e87-b168-5cf48c7d3c0a}</Project>
       <Name>VetClinic.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\VetClinic.Persistence\VetClinic.Persistence.csproj">
@@ -168,13 +168,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.0\build\netstandard2.0\NETStandard.Library.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
