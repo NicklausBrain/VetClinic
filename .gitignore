@@ -21,3 +21,7 @@
 /VetClinic.Persistence/bin/Debug
 /VetClinic.Domain/obj/Debug
 /VetClinic.Domain/bin/Debug
+/VetClinic!Mvc/bin
+/VetClinic!Mvc/obj
+/VetClinic!WebPages/bin
+/VetClinic!WebPages/obj/Debug

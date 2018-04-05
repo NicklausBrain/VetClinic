@@ -7,32 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic.Persistence", "Ve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic!Console", "VetClinic!Console\VetClinic!Console.csproj", "{3425B710-7EA5-4334-985B-F26B3EB4BA39}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VetClinic.Template", "VetClinic.Template\", "{8C4173A7-4C61-45E7-BDF8-09D4FD879739}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_57012"
-		Debug.AspNetCompiler.PhysicalPath = "VetClinic.Template\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57012\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_57012"
-		Release.AspNetCompiler.PhysicalPath = "VetClinic.Template\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57012\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "57012"
-		SlnRelativePath = "VetClinic.Template\"
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic.WebPages", "VetClinic.WebPages\VetClinic.WebPages.csproj", "{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vet.Clinic.Mvc", "Vet.Clinic.Mvc\Vet.Clinic.Mvc.csproj", "{02276798-65E2-460B-9375-1F176AD8EE8A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic.Domain", "VetClinic.Domain\VetClinic.Domain.csproj", "{3CB0F950-79DA-4E87-B168-5CF48C7D3C0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic!Mvc", "VetClinic!Mvc\VetClinic!Mvc.csproj", "{02276798-65E2-460B-9375-1F176AD8EE8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetClinic!WebPages", "VetClinic!WebPages\VetClinic!WebPages.csproj", "{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,22 +27,18 @@ Global
 		{3425B710-7EA5-4334-985B-F26B3EB4BA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3425B710-7EA5-4334-985B-F26B3EB4BA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3425B710-7EA5-4334-985B-F26B3EB4BA39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C4173A7-4C61-45E7-BDF8-09D4FD879739}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02276798-65E2-460B-9375-1F176AD8EE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02276798-65E2-460B-9375-1F176AD8EE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02276798-65E2-460B-9375-1F176AD8EE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02276798-65E2-460B-9375-1F176AD8EE8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3CB0F950-79DA-4E87-B168-5CF48C7D3C0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3CB0F950-79DA-4E87-B168-5CF48C7D3C0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB0F950-79DA-4E87-B168-5CF48C7D3C0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB0F950-79DA-4E87-B168-5CF48C7D3C0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02276798-65E2-460B-9375-1F176AD8EE8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D642CB-C88F-42F5-9CAC-FBA1DCE60C6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
