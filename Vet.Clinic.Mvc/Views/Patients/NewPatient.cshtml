@@ -1,0 +1,70 @@
+﻿@using System.Web.Mvc.Html
+@model VetClinic.Mvc.Models.NewPatientModel
+
+<!-- Initialize Date Picker control-->
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#birthday').datepicker({
+			format: "dd-mm-yy",
+			orientation: "bottom auto"
+		});
+	})
+</script>
+
+<!-- Page Heading -->
+<div class="row">
+	<div class="col-lg-4">
+		<h1 class="page-header">
+			New Patient
+			<!--<small>Secondary Text</small>-->
+		</h1>
+	</div>
+</div>
+<!-- /.row -->
+
+<div class="row">
+	<div class="col-md-7">
+		@using (Html.BeginForm("Create", "Patients", FormMethod.Post, new { enctype = "multipart/form-data" }))
+		{
+			<div class="form-group">
+				@Html.LabelFor(m => m.Name)
+				@Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+				@Html.ValidationMessageFor(m => m.Name)
+				@{
+					Html.ValidateFor(m => m.Name);
+				}
+			</div>
+			<div class="form-group">
+				@Html.LabelFor(m => m.Birthday)
+				@Html.TextBoxFor(m => m.Birthday, new { id = "birthday", @class = "form-control" })
+				@Html.ValidationMessageFor(m => m.Birthday)
+			</div>
+
+			<div class="form-group">
+				@Html.LabelFor(m => m.Sex)
+				@Html.EnumDropDownListFor(m => m.Sex, new { @class = "form-control" })
+			</div>
+
+			<div class="form-group">
+				@Html.LabelFor(m => m.Kind)
+				@Html.EnumDropDownListFor(m => m.Kind, new { @class = "form-control" })
+			</div>
+
+			<div class="form-group">
+				@Html.LabelFor(m => m.Description)
+				@Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+				@Html.ValidationMessageFor(m => m.Description)
+			</div>
+
+			<div class="form-group">
+				@Html.LabelFor(m => m.Image)
+				@Html.TextBoxFor(m => m.Image, new { type = "file", @class = "btn-default", id = "image", name = "Image", accept = "image/*" })
+				@Html.ValidationMessageFor(m => m.Image)
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-default col-xs-12">Create</button>
+			</div>
+		}
+	</div>
+</div>
+<!-- /.row -->

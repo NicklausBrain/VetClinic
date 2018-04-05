@@ -1,7 +1,6 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
-namespace Vet.Clinic.Mvc
+namespace VetClinic.Mvc
 {
 	public class BundleConfig
 	{
@@ -24,8 +23,7 @@ namespace Vet.Clinic.Mvc
 					  "~/Scripts/respond.js"));
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
-					  "~/Content/bootstrap.css",
-					  "~/Content/site.css"));
+					  "~/Content/css/*.css"));
 		}
 	}
 }
