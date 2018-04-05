@@ -13,8 +13,10 @@ namespace VetClinic.Mvc.Controllers
 	{
 		private readonly PetRegistry petRegistry;
 
-		public PatientsController()
+		public PatientsController() //PetRegistry petRegistry
 		{
+			// this.petRegistry = petRegistry;
+
 			// TODO: move dependencies initialization to container
 			var connectionString = Settings.ConnectionString;
 			var ownerRepository = new DapperOwnerRepository(connectionString);
@@ -75,7 +77,7 @@ namespace VetClinic.Mvc.Controllers
 					sex: patient.Sex,
 					kind: patient.Kind,
 					description: patient.Description,
-					image: imagePath,
+					image: patient.Image.FileName,
 					getOwner: () => new Owner( // todo: hardcoded owner
 						id: Guid.NewGuid(),
 						name: "Marina",

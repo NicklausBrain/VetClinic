@@ -1,4 +1,5 @@
 ﻿@using VetClinic.Domain
+@using VetClinic.Persistence.Dapper
 @using VetClinic.WebPages.Application
 
 @{
@@ -31,7 +32,16 @@
 <div class="row">
 	@if (IsPost)
 	{
-		var petsRepository = new XmlRepository<Pet>(Settings.PetRepositoryPath);
+		var connectionString = Settings.ConnectionString;
+		var ownerRepository = new DapperOwnerRepository(connectionString);
+		var petRepository = new DapperPetRepository(connectionString, ownerRepository);
+		var medicalRecordRepository = new DapperMedicalRecordRepository(connectionString, petRepository);
+
+		var petRegistry = new PetRegistry(
+			new DapperUnitOfWork(
+				medicalRecordRepository,
+				ownerRepository,
+				petRepository));
 
 		var image = Request.Files[0];
 
@@ -40,17 +50,23 @@
 			image.InputStream.CopyTo(file);
 		}
 
-		petsRepository.Create(new Pet
-		{
-			Name = Request["Name"],
-			Birthday = DateTime.Parse(Request["Birthday"]),
-			Description = Request["Description"],
-			Sex = (Sex)Enum.Parse(typeof(Sex), Request["Sex"]),
-			PetType = (PetType)Enum.Parse(typeof(PetType), Request["Type"]),
-			Image = image.FileName
-		});
-
-		petsRepository.SaveChanges();
+		var record = petRegistry.NewRecord(new Pet(
+			id: Guid.NewGuid(),
+			name: Request["Name"],
+			birthday: DateTime.Parse(Request["Birthday"]),
+			sex: (Sex)Enum.Parse(typeof(Sex), Request["Sex"]),
+			kind: (PetKind)Enum.Parse(typeof(PetKind), Request["Type"]),
+			description: Request["Description"],
+			image: image.FileName,
+			getOwner: () => new Owner( // todo: hardcoded owner
+				id: Guid.NewGuid(),
+				name: "Marina",
+				surname: "Brain",
+				address: new Address(
+					city: "Chernigiv",
+					street: "Radchenko",
+					building: "1",
+					addressLine: "2"))));
 
 		<div class="alert alert-success">
 			<strong>New patient has been successfully registerd!</strong>
