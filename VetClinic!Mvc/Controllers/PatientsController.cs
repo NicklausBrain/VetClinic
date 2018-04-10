@@ -1,36 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using System.Threading;
 using System.Web.Mvc;
 using VetClinic.Domain;
 using VetClinic.Mvc.Application;
+using VetClinic.Mvc.Attributes;
 using VetClinic.Mvc.Models;
 using VetClinic.Persistence.Dapper;
 
 namespace VetClinic.Mvc.Controllers
 {
+	[Authorize()]
 	public class PatientsController : Controller
 	{
 		private readonly PetRegistry petRegistry;
 
-		public PatientsController() //PetRegistry petRegistry
+		public PatientsController(PetRegistry petRegistry)
 		{
-			// this.petRegistry = petRegistry;
+			//var user = this.User;
+			//var claims = ((ClaimsIdentity) user.Identity).Claims;
 
-			// TODO: move dependencies initialization to container
-			var connectionString = Settings.ConnectionString;
-			var ownerRepository = new DapperOwnerRepository(connectionString);
-			var petRepository = new DapperPetRepository(connectionString, ownerRepository);
-			var medicalRecordRepository = new DapperMedicalRecordRepository(connectionString, petRepository);
+			//var roles = claims.Where(c => c.Type == ((ClaimsIdentity) user.Identity).RoleClaimType);
 
-			this.petRegistry = new PetRegistry(
-				new DapperUnitOfWork(
-					medicalRecordRepository,
-					ownerRepository,
-					petRepository));
+			this.petRegistry = petRegistry;
 		}
 
 		[HttpGet]
+		[LogAction]
 		public ActionResult Index(string searchString)
 		{
 			IEnumerable<Pet> pets;
@@ -58,18 +56,10 @@ namespace VetClinic.Mvc.Controllers
 		}
 
 		[HttpPost]
-		public ActionResult Create(NewPatientModel patient)
+		public ActionResult Create([ModelBinder(typeof(NewPatientModelBinder))] NewPatientModel patient)
 		{
 			if (ModelState.IsValid)
 			{
-				var imagePath = $@"{Settings.PetImagesPath}\{patient.Image.FileName}";
-
-				// TODO: this is nasty
-				using (var file = System.IO.File.Create(imagePath))
-				{
-					patient.Image.InputStream.CopyTo(file);
-				}
-
 				var record = this.petRegistry.NewRecord(new Pet(
 					id: Guid.NewGuid(),
 					name: patient.Name,

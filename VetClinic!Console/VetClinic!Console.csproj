@@ -58,11 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VetClinic.Domain\VetClinic.Domain.csproj">
-      <Project>{A612C72F-4F7F-4767-8DAA-72829C1F1D7B}</Project>
+      <Project>{3cb0f950-79da-4e87-b168-5cf48c7d3c0a}</Project>
       <Name>VetClinic.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\VetClinic.Persistence\VetClinic.Persistence.csproj">
-      <Project>{8C8AE49E-2CFF-48E3-89F5-5B405C985199}</Project>
+      <Project>{8c8ae49e-2cff-48e3-89f5-5b405c985199}</Project>
       <Name>VetClinic.Persistence</Name>
     </ProjectReference>
   </ItemGroup>
